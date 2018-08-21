@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<!-- <ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+
+<ion-content padding>
+
+<h2 text-center >Welcome to dashboard</h2>
+<div>
+  <ion-grid text-center>
+    <ion-row>
+      <!-- <ion-col class="home-box" col-12 (click)="homepage()">
+        <ion-icon name="home"></ion-icon>
+        <span>Home</span>
+      </ion-col> -->
+      <ion-col class="home-box" col-6 (click)="oders()">
+        <ion-icon name="ios-cart-outline"></ion-icon>
+        <span>Orders</span>
+      </ion-col>
+      <ion-col class="home-box" col-6 (click)="invoices()">
+        <ion-icon name="ios-clipboard-outline"></ion-icon>
+        <span>Invoices</span>
+      </ion-col>
+      <ion-col class="home-box"col-6 (click)="weather()" >
+        <ion-icon name="ios-cloudy-night-outline"></ion-icon>
+        <span>Weather</span>
+      </ion-col>
+      <ion-col class="home-box" col-6 (click)="paint()">
+        <ion-icon name="ios-color-palette-outline"></ion-icon>
+        <span>Paint</span>
+      </ion-col>
+      <ion-col class="home-box"col-6 (click)="imagesGallery()">
+        <ion-icon name="ios-images-outline"></ion-icon>
+        <span>Gallery</span>
+      </ion-col>
+      <ion-col class="home-box"col-6 (click)="directory()">
+        <ion-icon name="ios-contacts-outline"></ion-icon>
+        <span>Directory</span>
+      </ion-col>
+      <ion-col class="home-box"col-6 (click)="post()">
+        <ion-icon name="ios-paper-outline"></ion-icon>
+        <span>Posts</span>
+      </ion-col>
+      <ion-col class="home-box" col-6 (click)="aboutpage()">
+        <ion-icon name="ios-information-circle-outline"></ion-icon>
+        <span>About</span>
+      </ion-col>
+      <ion-col class="home-box" col-6 (click)="contactpage()">
+        <ion-icon name="ios-at-outline"></ion-icon>
+        <span>Contact</span>
+      </ion-col>
+      
+
+    </ion-row>
+  </ion-grid>
+</div>
+<div text-center padding (click)="logout()" class="red">
+  <ion-icon name="ios-power"></ion-icon> Logout</div>
+</ion-content>
+
+
+<!-- <ion-footer>
+  <ion-toolbar>
+    <ion-grid text-center>
+      <ion-row>
+        <ion-col col-4 (click)="homepage()">
+          <ion-icon name="home"></ion-icon>
+          <span>Home</span>
+        </ion-col>
+        <ion-col col-4 (click)="aboutpage()">
+          <ion-icon name="ios-paper"></ion-icon>
+          <span>About</span>
+        </ion-col>
+        <ion-col col-4 (click)="contactpage()">
+          <ion-icon name="ios-send"></ion-icon>
+          <span>Contact</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-footer> -->
+

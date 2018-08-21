@@ -1,0 +1,39 @@
+.home-box{
+    background: rgba(228, 228, 228, 0.74);
+    border-bottom: 4px solid #f4433669;
+    padding: 13px 0;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-right: 3%;
+    width: 33%;
+    max-width: 31%;
+    ion-icon{
+        width: 100%;
+        display: block;
+        font-size: 40px;
+        color: #F44336;
+    }
+    span{
+        width: 100%;
+        display: block;
+        color: #989898;
+    }
+    &:hover{
+        color: #fff;
+        background: rgba(38, 38, 38, 0.9803921568627451);
+    }
+    &:nth-child(3n){
+        margin-right: 0px;
+    }
+    
+}
+.red {
+  color: red;
+  cursor: pointer;
+}
+
+.scroll-content{
+    background: url(/assets/imgs/home-bg.jpg) #e4e4e4 right;
+    background-size: cover;
+    background-blend-mode: hard-light;
+}

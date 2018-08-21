@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>All Invoices</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content padding>
+  <ion-searchbar placeholder="Search..." (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-segment [(ngModel)]="change"  class="invoice-filter">
+    <ion-segment-button color="danger" value="Pending">
+     Pending
+    </ion-segment-button>
+    <ion-segment-button color="primary" value="Payed">
+      Payed
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- <ion-segment [(ngModel)]="all">
+      <ion-segment-button value="all" color="secondary">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="pending" color="orange">
+        Pending
+      </ion-segment-button>
+      <ion-segment-button value="payed" color="red">
+        Payed
+      </ion-segment-button>
+    </ion-segment> -->
+
+<ion-list>
+<ion-item *ngFor="let dir of directory" [ngSwitch]="dir.status" (ionChange)="segmentChanged($event)" (click)="viewInvoice(dir)">
+    <ion-icon name="ios-radio-button-on-outline" [ngClass]="{'payed' : dir.status=='Payed', 'pending' : dir.status=='Pending'}"  item-start></ion-icon>
+    <h3>{{ dir.fullname }}</h3>
+    <p>{{ dir.number }}</p>
+    <span item-end><p [ngClass]="{'payed' : dir.status=='Payed', 'pending' : dir.status=='Pending'}">{{ dir.status }}</p></span>
+  </ion-item>
+  <!-- <ion-item *ngFor="let dir of directory" *ngSwitchCase="'pending'" ng-if="dir.status=='pending'">
+    <ion-icon name="leaf" item-start></ion-icon>
+    <h3>{{ dir.fullname }}</h3>
+    <p>{{ dir.phone }}</p>
+    <p>{{ dir.number }}</p>
+    <span item-end><p>{{ dir.status='pending' }}</p></span>
+  </ion-item>
+  <ion-item *ngFor="let dir of directory" *ngSwitchCase="'payed'" ng-if="dir.status=='payed'">
+    <ion-icon name="leaf" item-start></ion-icon>
+    <h3>{{ dir.fullname }}</h3>
+    <p>{{ dir.phone }}</p>
+    <p>{{ dir.number }}</p>
+    <span item-end><p>{{ dir.status=='payed'}}</p></span>
+  </ion-item> -->
+</ion-list>
+
+
+<ion-fab top right edge>
+  <button ion-fab mini color="danger" (click)="addinvoice()">
+    <ion-icon name="ios-add-outline"></ion-icon>
+  </button>
+</ion-fab>
+
+
+</ion-content>

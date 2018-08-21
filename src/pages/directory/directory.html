@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Directory</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-searchbar placeholder="Search by name..." (ionInput)="getItems($event)"></ion-searchbar>
+  
+  <ion-list>
+    <ion-item *ngFor="let dir of directory">
+      <ion-avatar item-start>
+          <ion-icon class="directory-pic" name="contact"></ion-icon>
+      </ion-avatar>
+      <h3>{{ dir.fullname }}</h3>
+      <p>{{ dir.job }}</p>
+      <p>{{ dir.phone }}</p>
+    </ion-item>
+  </ion-list>
+
+<ion-fab top right edge>
+  <button ion-fab mini color="danger" (click)="toAdd()">
+    <ion-icon name="ios-add-outline"></ion-icon>
+  </button>
+</ion-fab>
+
+
+</ion-content>

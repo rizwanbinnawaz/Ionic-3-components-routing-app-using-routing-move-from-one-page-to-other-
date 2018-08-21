@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add Post</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+<form text-left (ngSubmit)="savePost(savepost)">
+  <ion-list class="form-inputs">
+    <ion-item>
+      <ion-label floating>Title Here..</ion-label>
+      <ion-input type="text" [(ngModel)]="posttitle" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Description</ion-label>
+      <ion-textarea type="text" [(ngModel)]="postdescription" row="5" [ngModelOptions]="{standalone: true}"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button ion-button full color="danger" type="submit">Save</button>
+</form>
+
+</ion-content>

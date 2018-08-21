@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>View Invoices</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <h2>Customer Invoice Details</h2>
+  <hr/>
+    <h3>Name: {{ dir.fullname }}</h3>
+    <p>Phone#: {{ dir.phone }}</p>
+    <p>Invoice#: {{ dir.number }}</p>
+    <p>Payment Status: {{ dir.status }}</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<ion-item>
+  <ion-label>Pay Now!</ion-label>
+  <ion-toggle checked="false" (click)="changeStatus($event, $index)" color="danger"></ion-toggle>
+</ion-item>
+
+<div>
+  <p><strong>Customer Signature:</strong></p>
+  <div class="signature-box"></div>
+</div>
+
+<ion-fab top right edge (click)="printPage(dir)">
+  <button ion-fab mini color="danger">
+    <ion-icon name="ios-print-outline"></ion-icon>
+  </button>
+</ion-fab>
+
+
+</ion-content>

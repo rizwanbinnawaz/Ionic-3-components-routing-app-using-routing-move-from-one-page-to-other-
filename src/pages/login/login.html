@@ -1,0 +1,25 @@
+<ion-content padding>
+
+  <div text-center class="img-wrap">
+    <img src="assets/imgs/person.png" />
+  </div>
+  <h4 text-center class="author">I'M<br/> Invoices Management System</h4>
+
+
+  <form text-left class="form-wrap" (ngSubmit)="loginUser(form)">
+    <ion-list class="form-inputs">
+
+      <ion-item>
+        <ion-input type="text" placeholder="Username" [(ngModel)]="uname" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="upass" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <button type="submit" ion-button full color="danger" >Login</button>
+  </form>
+
+</ion-content>
+

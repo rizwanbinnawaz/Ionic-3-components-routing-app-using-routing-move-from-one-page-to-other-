@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Paint</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  
+  <div class="row" #fixedContainer>
+    <div class="draw-image-wrap">
+      <canvas #imagesCanvas (touchstart)="startDraw($event)" (touchmove)="moved($event)"></canvas>
+       <!-- *ngIf="storedImages.length > 0" -->
+        <!-- <ion-list ngIf="storeImages.length > 0">
+          <ion-list>Previous Drawing</ion-list>
+          <ion-card *ngFor="let obj of storeImages; let i = index">
+            <ion-card-content>
+              <img [src]="getImag(obj)">
+            </ion-card-content>
+            <ion-row>
+              <button ion-button icon-only full color="danger" (click)="removeImageAtIndex(i)">
+                <ion-icon name="trash"></ion-icon>
+              </button>
+            </ion-row>
+          </ion-card>
+        </ion-list> -->
+     </div>
+     <button ion-button icon-only full color="danger" class="save-btn" (click)="saveImage()">
+               <ion-icon name="ios-image-outline"></ion-icon> Save Image
+      </button>
+    <div class="chose-color">
+      <h5>Chose Color:</h5>
+      <span *ngFor="let color of colorList" [style.background]="color" class="colors-list" tappable (click)="slctedColor(color)"></span>
+      <ion-row class="selected-color-btn" radio-group [(ngModel)]="selectedColor">
+        <div class="color-list" *ngFor="let color of colorList" text-center>
+          <ion-radio [value]="color"></ion-radio>
+        </div>
+      </ion-row>
+    </div>
+  </div>
+
+</ion-content>

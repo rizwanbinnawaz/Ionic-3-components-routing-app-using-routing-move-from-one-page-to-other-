@@ -1,0 +1,10 @@
+.gallery-images-thumb{
+    width:49%;
+    float:left;
+    height:100px;
+    overflow:hidden;
+    margin-right:5px;
+    &:nth-child(2n){
+        margin-right:0px;
+    }
+}
