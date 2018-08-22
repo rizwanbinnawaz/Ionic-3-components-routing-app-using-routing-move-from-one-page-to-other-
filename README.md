@@ -8,7 +8,7 @@ Ionic 3 components routing app (using routing move from one page to other) #Angu
 // import
 import { AboutPage } from '../about/about';
 ```
-than in cpomonent class define function here i'm create aboutpage()
+than in component class define function here i'm create aboutpage()
 ``` ruby
 export class HomePage {
    aboutpage() {
